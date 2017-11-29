@@ -1,0 +1,3 @@
+﻿a:
+cd documents/webdesign/The-System
+Browser-sync start --server --directory --files “**/*”
