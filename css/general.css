@@ -1,0 +1,11 @@
+.clickable-darken:hover{
+    background-color: #eff1f2;
+    border-radius: 25px;
+
+    cursor: pointer;
+}
+
+.padding-yy{
+    padding-top: 10px;
+    padding-bottom: 10px; 
+}

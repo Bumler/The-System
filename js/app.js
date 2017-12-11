@@ -6,10 +6,10 @@ theSystem.config(['$routeProvider', function($routeProvider){
 		templateUrl: 'views/main.html',
 		controller: 'mainController'
 	})
-	// .when('/project',{
-	// 	templateUrl: 'views/project.html',
-	// 	controller: 'projectController'
-	// })
+	.when('/traits',{
+		templateUrl: 'views/traits.html',
+		controller: 'traitsController'
+	})
 	.otherwise({
 		redirectTo: '/'
 	});
@@ -17,6 +17,12 @@ theSystem.config(['$routeProvider', function($routeProvider){
 }]);
 
 
-theSystem.controller('mainController', function($scope){
+theSystem.controller('mainController', function($scope, $location){
+	$scope.goToTraits = function(){
+		$location.path('traits');
+	}
+});
+
+theSystem.controller('traitsController', function($scope){
 
 });
