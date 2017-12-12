@@ -1,0 +1,15 @@
+.header-mar{
+    margin-top: 5rem;
+}
+
+.subpage-header{
+    border-bottom: 1px solid rgba(33,37,41,.1);
+    background-color: #f05f40;
+}
+
+.subpage-header .title {
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+}

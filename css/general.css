@@ -1,11 +1,54 @@
-.clickable-darken:hover{
-    background-color: #eff1f2;
-    border-radius: 25px;
+@font-face {
+    font-family: 'Glyphicons Halflings';
+    src: url('node_modules/bootstrap/dist/fonts/glyphicons-halflings-regular.eot');
+    src: url('node_modules/bootstrap/dist/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('node_modules/bootstrap/dist/fonts/glyphicons-halflings-regular.woff') format('woff'), url('node_modules/bootstrap/dist/fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('node_modules/bootstrap/dist/fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
+  }
 
+.clickable-bg-darken:hover{
+    background-color: #eff1f2;
     cursor: pointer;
+}
+
+.clickable-bg-orange:hover{
+    background-color: #f05f40;
+    cursor: pointer;
+}
+
+.clickable-orange:hover{
+    color: #f05f40;
+    cursor: pointer;
+}
+
+.clickable-darken:hover{
+    color: #eff1f2;
+    cursor: pointer;
+}
+
+.service-box{
+    border-radius: 25px;
 }
 
 .padding-yy{
     padding-top: 10px;
     padding-bottom: 10px; 
+}
+
+.margin-y{
+    margin-top: 10px;
+}
+
+.text-red{
+    color:red;
+}
+
+.italics{
+    font-style: italic;
+}
+
+.strong{
+    font-weight: 600;
+}
+
+.float-right{
+    float: right;
 }

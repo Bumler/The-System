@@ -1,0 +1,42 @@
+.trait{
+    display: block;
+    width: 31%;
+    float: left;
+
+    margin: 0px 15px 30px 15px;
+    padding: 0px 10px 10px 10px;
+
+    border: 1px solid rgba(33,37,41,.1);
+
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,f6f6f6+47,ededed+100;White+3D+%231 */
+    background: #ffffff; /* Old browsers */
+    background: -moz-linear-gradient(-45deg, #ffffff 0%, #f6f6f6 47%, #ededed 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, #ffffff 0%,#f6f6f6 47%,#ededed 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, #ffffff 0%,#f6f6f6 47%,#ededed 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.trait h3{
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 600;
+    background: #FFC5A6;
+
+    margin: 0px -10px;
+    padding: 10px;
+    border-bottom: 1px solid rgba(33,37,41,.1);
+}
+
+.trait .points{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid black;
+
+    text-align: center;
+}
+
+.traits .description{
+    font-style: italic;
+}

@@ -23,6 +23,15 @@ theSystem.controller('mainController', function($scope, $location){
 	}
 });
 
-theSystem.controller('traitsController', function($scope){
+theSystem.controller('traitsController', function($scope, $http){
+	apiBaseURL = "https://92faaba5-bf69-4269-aac4-187f38b840b7.mock.pstmn.io";
 
+	$scope.getTraits = function(){
+		$http.get(apiBaseURL)
+			.then(function (response) {
+				$scope.traits = response.data;
+			})
+	}
+
+	$scope.getTraits();
 });
