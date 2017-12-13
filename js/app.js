@@ -23,14 +23,25 @@ theSystem.controller('mainController', function($scope, $location){
 	}
 });
 
-theSystem.controller('traitsController', function($scope, $http){
+theSystem.controller('traitsController', function($scope, $http, $location){
 	apiBaseURL = "https://92faaba5-bf69-4269-aac4-187f38b840b7.mock.pstmn.io";
+
+	$scope.goToMain = function(){
+		$location.path('/');
+	}
 
 	$scope.getTraits = function(){
 		$http.get(apiBaseURL)
 			.then(function (response) {
-				$scope.traits = response.data;
+				populateTraitsList(response.data);
 			})
+	}
+
+	function populateTraitsList(traitList){
+		$scope.traits = [[],[],[]];
+
+		for (i = 0; i < traitList.length; i++)
+			$scope.traits[i%3].push(traitList[i]);
 	}
 
 	$scope.getTraits();

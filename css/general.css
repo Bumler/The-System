@@ -52,3 +52,19 @@
 .float-right{
     float: right;
 }
+
+.faux-button{
+    color: white;
+    background-color: #f05f40;
+    cursor: pointer;
+    font-size: 3.5rem;
+    padding: 10px 15px;
+    border-radius: 100%;
+}
+
+.abs-bottom{
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    z-index: 9000;
+}
