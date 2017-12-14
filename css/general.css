@@ -33,8 +33,16 @@
     padding-bottom: 10px; 
 }
 
-.margin-y{
+.top-mar-y{
     margin-top: 10px;
+}
+
+.top-mar-yy{
+    margin-top: 20px;
+}
+
+.top-mar-yyyy{
+    margin-top: 40px;
 }
 
 .text-red{
@@ -53,13 +61,25 @@
     float: right;
 }
 
-.faux-button{
+.faux-button-circle{
     color: white;
     background-color: #f05f40;
     cursor: pointer;
     font-size: 3.5rem;
     padding: 10px 15px;
     border-radius: 100%;
+}
+
+.faux-button-rect{
+    color: white;
+    background-color: #f05f40;
+    cursor: pointer;
+    padding: 10px;
+
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.2rem;
+    border-radius: 20px;
 }
 
 .abs-bottom{

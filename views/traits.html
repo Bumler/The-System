@@ -10,7 +10,49 @@
 </nav>
 
 <div class="container-fluid header-mar">
-    <div class="fa fa-plus faux-button abs-bottom"></div>
+    <div class="fa fa-plus faux-button-circle abs-bottom" title="Add a Trait!"></div>
+    <div class="trait new-trait abs-bottom">
+        <h3>Add a Trait!</h3>
+        <form>
+            <label>Trait Name</label>
+            <input type="text" />
+
+            <label>Action Type</label>
+            <input type="text" />
+
+            <label>Additional Cost</label>
+            <input type="text" />
+
+            <label>Description</label>
+            <textarea type="text" />
+
+            <div class="row">
+                <div class="col-sm-3">
+                    <label>CD</label>
+                    <input type="text" />
+                </div>
+                <div class="col-sm-3">
+                    <label>Unit</label>
+                    <input type="text" />
+                </div>
+                <div class="col-sm-6">
+                    <label>Points</label>
+                    <input type="text" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <div class="faux-button-rect top-mar-yyyy">
+                        Add Trait
+                    </div>
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+        </form>
+    </div>
+
     <div class="row">
         <div class="col-md-6 col-lg-4">
             <div ng-repeat="trait in traits[0]" class="trait">
@@ -19,13 +61,13 @@
                     <span class="float-right">
                         <i class="clickable-orange fa fa-level-up"></i> {{trait.votes}}</span>
                 </h3>
-                <div class="margin-y">
+                <div class="top-mar-y">
                     <span class="italics">{{trait.actionType}} Action</span>
                     <span class="float-right points strong" title="Costs {{trait.points}} Points">{{trait.points}}</span>
                 </div>
                 <div class="text-red italics" ng-if="trait.additionalCosts">{{trait.additionalCosts}}</div>
-                <div class="margin-y">{{trait.description}}</div>
-                <div class="margin-y strong" ng-if="trait.cooldown!=0">CD: {{trait.cooldown}} {{trait.cooldownUnit}}</div>
+                <div class="top-mar-y">{{trait.description}}</div>
+                <div class="top-mar-y strong" ng-if="trait.cooldown!=0">CD: {{trait.cooldown}} {{trait.cooldownUnit}}</div>
             </div>
         </div>
 
@@ -36,13 +78,13 @@
                     <span class="float-right">
                         <i class="clickable-orange fa fa-level-up"></i> {{trait.votes}}</span>
                 </h3>
-                <div class="margin-y">
+                <div class="top-mar-y">
                     <span class="italics">{{trait.actionType}} Action</span>
                     <span class="float-right points strong" title="Costs {{trait.points}} Points">{{trait.points}}</span>
                 </div>
                 <div class="text-red italics" ng-if="trait.additionalCosts">{{trait.additionalCosts}}</div>
-                <div class="margin-y">{{trait.description}}</div>
-                <div class="margin-y strong" ng-if="trait.cooldown!=0">CD: {{trait.cooldown}} {{trait.cooldownUnit}}</div>
+                <div class="top-mar-y">{{trait.description}}</div>
+                <div class="top-mar-y strong" ng-if="trait.cooldown!=0">CD: {{trait.cooldown}} {{trait.cooldownUnit}}</div>
             </div>
         </div>
 
@@ -53,13 +95,13 @@
                     <span class="float-right">
                         <i class="clickable-orange fa fa-level-up"></i> {{trait.votes}}</span>
                 </h3>
-                <div class="margin-y">
+                <div class="top-mar-y">
                     <span class="italics">{{trait.actionType}} Action</span>
                     <span class="float-right points strong" title="Costs {{trait.points}} Points">{{trait.points}}</span>
                 </div>
                 <div class="text-red italics" ng-if="trait.additionalCosts">{{trait.additionalCosts}}</div>
-                <div class="margin-y">{{trait.description}}</div>
-                <div class="margin-y strong" ng-if="trait.cooldown!=0">CD: {{trait.cooldown}} {{trait.cooldownUnit}}</div>
+                <div class="top-mar-y">{{trait.description}}</div>
+                <div class="top-mar-y strong" ng-if="trait.cooldown!=0">CD: {{trait.cooldown}} {{trait.cooldownUnit}}</div>
             </div>
         </div>
     </div>
