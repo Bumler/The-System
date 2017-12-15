@@ -10,43 +10,38 @@
 </nav>
 
 <div class="container-fluid header-mar">
-    <div class="fa fa-plus faux-button-circle abs-bottom" title="Add a Trait!"></div>
-    <div class="trait new-trait abs-bottom">
+    <div ng-click="addingTrait = !addingTrait" class="fa faux-button-circle abs-bottom" ng-class="{'fa-plus' : !addingTrait, 'fa-times' : addingTrait}" title="Add a Trait!"></div>
+    <div ng-show="addingTrait" class="trait new-trait abs-bottom">
         <h3>Add a Trait!</h3>
-        <form>
+        <form name="newTraitForm">
             <label>Trait Name</label>
-            <input type="text" />
+            <input type="text" name="ntName" ng-model="ntName" required/>
 
             <label>Action Type</label>
-            <input type="text" />
-
-            <label>Additional Cost</label>
-            <input type="text" />
+            <input type="text" name="ntActionType" ng-model="ntActionType" required/>
 
             <label>Description</label>
-            <textarea type="text" />
+            <textarea type="text" name="ntDescription" ng-model="ntDescription" required />
 
             <div class="row">
                 <div class="col-sm-3">
                     <label>CD</label>
-                    <input type="text" />
+                    <input type="number" name="ntCooldown" ng-model="ntCooldown" required/>
                 </div>
                 <div class="col-sm-3">
                     <label>Unit</label>
-                    <input type="text" />
+                    <input type="text" value="Rounds" name="ntCooldownUnit" ng-model="ntCooldownUnit" required/>
                 </div>
                 <div class="col-sm-6">
                     <label>Points</label>
-                    <input type="text" />
+                    <input type="number" name="ntPoints" ng-model="ntPoints" required/>
                 </div>
             </div>
 
             <div class="row">
                 <div class="col-md-3"></div>
                 <div class="col-md-6">
-                    <div class="faux-button-rect top-mar-yyyy">
-                        Add Trait
-                    </div>
+                    <input type="submit" class="faux-button-rect top-mar-yyyy" ng-disabled="newTraitForm.$invalid" ng-click="addTrait()" value="Add Trait" />
                 </div>
                 <div class="col-md-3"></div>
             </div>
@@ -65,7 +60,6 @@
                     <span class="italics">{{trait.actionType}} Action</span>
                     <span class="float-right points strong" title="Costs {{trait.points}} Points">{{trait.points}}</span>
                 </div>
-                <div class="text-red italics" ng-if="trait.additionalCosts">{{trait.additionalCosts}}</div>
                 <div class="top-mar-y">{{trait.description}}</div>
                 <div class="top-mar-y strong" ng-if="trait.cooldown!=0">CD: {{trait.cooldown}} {{trait.cooldownUnit}}</div>
             </div>
@@ -82,7 +76,6 @@
                     <span class="italics">{{trait.actionType}} Action</span>
                     <span class="float-right points strong" title="Costs {{trait.points}} Points">{{trait.points}}</span>
                 </div>
-                <div class="text-red italics" ng-if="trait.additionalCosts">{{trait.additionalCosts}}</div>
                 <div class="top-mar-y">{{trait.description}}</div>
                 <div class="top-mar-y strong" ng-if="trait.cooldown!=0">CD: {{trait.cooldown}} {{trait.cooldownUnit}}</div>
             </div>
@@ -99,7 +92,6 @@
                     <span class="italics">{{trait.actionType}} Action</span>
                     <span class="float-right points strong" title="Costs {{trait.points}} Points">{{trait.points}}</span>
                 </div>
-                <div class="text-red italics" ng-if="trait.additionalCosts">{{trait.additionalCosts}}</div>
                 <div class="top-mar-y">{{trait.description}}</div>
                 <div class="top-mar-y strong" ng-if="trait.cooldown!=0">CD: {{trait.cooldown}} {{trait.cooldownUnit}}</div>
             </div>
