@@ -27,6 +27,8 @@ theSystem.controller('traitsController', function($scope, $http, $location){
 	apiBaseURL = "https://92faaba5-bf69-4269-aac4-187f38b840b7.mock.pstmn.io";
 	$scope.addingTrait = false;
 
+	$scope.cdOptions = ['Round', 'Minute', 'Hour', 'Days'];
+
 	$scope.goToMain = function(){
 		$location.path('/');
 	}
@@ -47,7 +49,6 @@ theSystem.controller('traitsController', function($scope, $http, $location){
 
 	$scope.addTrait = function(){
 		var trait = $scope.newTrait;
-
 		//POST HERE
 		//ON SUCCESS
 		$scope.getTraits();
@@ -58,6 +59,7 @@ theSystem.controller('traitsController', function($scope, $http, $location){
 
 	$scope.resetForm = function(){
 		$scope.newTrait = { };
+		$scope.newTrait.CooldownUnit = $scope.cdOptions[0];
 
 		$scope.newTraitForm.$setPristine();
 		$scope.newTraitForm.$setUntouched();

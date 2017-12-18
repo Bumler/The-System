@@ -10,15 +10,16 @@
 </nav>
 
 <div class="container-fluid header-mar">
-    <div ng-click="addingTrait = !addingTrait" class="fa faux-button-circle abs-bottom" ng-class="{'fa-plus' : !addingTrait, 'fa-times' : addingTrait}" title="Add a Trait!"></div>
+    <div ng-click="addingTrait = !addingTrait" class="fa faux-button-circle abs-bottom" ng-class="{'fa-plus' : !addingTrait, 'fa-times' : addingTrait}"
+        title="Add a Trait!"></div>
     <div ng-show="addingTrait" class="trait new-trait abs-bottom">
         <h3>Add a Trait!</h3>
-        <form name="newTraitForm"  ng-submit="addTrait()" novalidate>
+        <form name="newTraitForm" ng-submit="addTrait()" novalidate>
             <label>Trait Name</label>
-            <input type="text" name="Name" ng-model="newTrait.Name" ng-required="true"/>
+            <input type="text" name="Name" ng-model="newTrait.Name" ng-required="true" />
 
             <label>Action Type</label>
-            <input type="text" name="ActionType" ng-model="newTrait.ActionType" ng-required="true"/>
+            <input type="text" name="ActionType" ng-model="newTrait.ActionType" ng-required="true" />
 
             <label>Description</label>
             <textarea type="text" name="Description" ng-model="newTrait.Description" ng-required="true" />
@@ -26,22 +27,22 @@
             <div class="row">
                 <div class="col-sm-3">
                     <label>CD</label>
-                    <input type="number" name="Cooldown" ng-model="newTrait.Cooldown" ng-required="true"/>
+                    <input type="number" name="Cooldown" ng-model="newTrait.Cooldown" ng-required="true" />
                 </div>
                 <div class="col-sm-3">
                     <label>Unit</label>
-                    <input type="text" value="Rounds" name="CooldownUnit" ng-model="newTrait.CooldownUnit" ng-required="true"/>
+                    <select type="text" name="CooldownUnit" ng-model="newTrait.CooldownUnit" ng-required="true" ng-options="option as option for option in cdOptions" ng-init="newTrait.CooldownUnit = cdOptions[0]"></select>
                 </div>
                 <div class="col-sm-6">
                     <label>Points</label>
-                    <input type="number" name="Points" ng-model="newTrait.Points" ng-required="true"/>
+                    <input type="number" name="Points" ng-model="newTrait.Points" ng-required="true" />
                 </div>
             </div>
 
             <div class="row">
                 <div class="col-md-3"></div>
                 <div class="col-md-6">
-                    <input type="submit" class="faux-button-rect top-mar-yyyy" ng-disabled="newTraitForm.$invalid" value="Add Trait"/>
+                    <input type="submit" class="faux-button-rect top-mar-yyyy" ng-disabled="newTraitForm.$invalid" value="Add Trait" />
                 </div>
                 <div class="col-md-3"></div>
             </div>

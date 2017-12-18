@@ -110,3 +110,9 @@ input.ng-touched.ng-invalid {
 textarea.ng-touched.ng-invalid {
     border: 2px solid red;
 }
+
+select{
+    /* Bad fix but I don't want to deal with it right now */
+    padding: 3.24px 0px;
+    width: 100%;
+}
