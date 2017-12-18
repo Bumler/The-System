@@ -84,9 +84,29 @@
     border-style: none;
 }
 
+.faux-button-rect:disabled{
+    background-color: lightgray;
+}
+
+.faux-button-circle:hover{
+    background-color: #EB3812;
+}
+
+.faux-button-rect:hover:enabled{
+    background-color: #EB3812;
+}
+
 .abs-bottom{
     position: fixed;
     bottom: 15px;
     right: 15px;
     z-index: 9000;
+}
+
+input.ng-touched.ng-invalid {
+    border: 2px solid red;
+}
+
+textarea.ng-touched.ng-invalid {
+    border: 2px solid red;
 }

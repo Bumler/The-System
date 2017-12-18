@@ -46,21 +46,21 @@ theSystem.controller('traitsController', function($scope, $http, $location){
 	}
 
 	$scope.addTrait = function(){
-		var newTrait = new Object();
-		newTrait.Name = $scope.newTraitForm.ntName.$viewValue;
-		newTrait.ActionType = $scope.newTraitForm.ntActionType.$viewValue;
-		newTrait.Points = $scope.newTraitForm.ntPoints.$viewValue;
-		newTrait.Description = $scope.newTraitForm.ntDescription.$viewValue;
-		newTrait.Cooldown = $scope.newTraitForm.ntCooldown.$viewValue;
-		newTrait.CooldownUnit = $scope.newTraitForm.ntCooldownUnit.$viewValue;
+		var trait = $scope.newTrait;
 
-		debugger;
 		//POST HERE
 		//ON SUCCESS
 		$scope.getTraits();
+		$scope.resetForm();
 		$scope.addingTrait = false;
-		//todo finish the reset form ng-if wont work for some reason
 		$scope.newTraitForm.$setPristine(true);
+	}
+
+	$scope.resetForm = function(){
+		$scope.newTrait = { };
+
+		$scope.newTraitForm.$setPristine();
+		$scope.newTraitForm.$setUntouched();
 	}
 
 	$scope.getTraits();
